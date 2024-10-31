@@ -88,6 +88,61 @@
         .carousel-caption button:hover {
             background-color: #c3a125;
         }
+
+<!--        drop down styling-->
+
+        .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+      /* Basic styling for the dropdown trigger */
+    .dropdown-toggle-custom {
+        cursor: pointer;
+    }
+
+    /* Dropdown content styling */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .dropdown-menu.table-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f2f2f2;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Table-like dropdown structure */
+    .table-dropdown table {
+        border-collapse: collapse;
+    }
+    .table-dropdown td,th {
+        padding: 8px 15px;
+    }
+
+
+    /* Styling for dropdown links without blue color or underline */
+    .dropdown-item-custom {
+        color: #333 !important;
+        text-decoration: none !important;
+        display: block;
+    }
+    .dropdown-item-custom:hover {
+        background-color: #e0e0e0;
+    }
+     .small-text {
+        font-size: 0.85rem; /* Adjust the size as needed */
+        white-space: nowrap; /* Prevent text from wrapping to a new line */
+    }
+    .column-text
+    {
+     white-space: nowrap; /* Prevent text from wrapping to a new line */
+    }
+
+    .dropdown-item-custom {
+        display: block; /* Ensure block display for anchor tags */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
     </style>
 </head>
 <body>
@@ -120,40 +175,156 @@
     </nav>
 
 
-<!-- Category Row -->
+
+<!-- Category Row with Table-Style Dropdowns -->
 <div class="container-fluid py-2" style="background-color: #f2f2f2;">
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-around flex-wrap">
-                <a href="#" class="text-dark text-decoration-none mx-2">ALL JEWELRY</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">GOLD</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">DIAMOND</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">EARRINGS</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">RINGS</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">GIFTING</a>
-                <a href="#" class="text-dark text-decoration-none mx-2">MORE</a>
+
+
+             <!-- Dropdown for ALL JEWELRY -->
+<div class="dropdown mx-2">
+    <span class="text-dark text-decoration-none dropdown-toggle-custom">ALL JEWELRY</span>
+    <div class="dropdown-menu table-dropdown">
+        <div class="table-responsive">
+            <table>
+                <tr>
+                    <th class="column-text"  style="color:brown;">CATEGORY</th>
+                    <th class="column-text" ></th>
+                    <th class="column-text"  style="color:brown;">GENDER</th>
+                    <th class="column-text"  style="color:brown;">PRICE BAND</th>
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">ALL JEWELRY</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">BANGLES</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">WOMEN</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text"> <25 </a></td>
+
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">EARRINGS</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">BRACELETS</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">MEN</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text"> 25K TO 50K </a></td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">PENDANTS</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">PENDANTS & EARRING SET</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">KIDS&TEENS</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text"> 50K - 1L </a></td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">FINGER RINGS</a></td>
+                    <td><a href="#" class="dropdown-item-custom small-text">GOLD COINS</a></td>
+                     <td><a href="#" class="dropdown-item-custom small-text">  </a></td>
+                     <td><a href="#" class="dropdown-item-custom small-text"> 1L & ABOVE </a></td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">MANGALSUTRA</a></td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">CHAINS</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">NOSE PIN</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">NECKLACES</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="dropdown-item-custom small-text">NECKLACE SET</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Dropdown for GOLD -->
+                <div class="dropdown mx-2">
+                    <span class="text-dark text-decoration-none dropdown-toggle-custom">GOLD</span>
+                    <div class="dropdown-menu table-dropdown">
+                        <table>
+                            <tr>
+                                <td><a href="#" class="dropdown-item-custom">Gold Chains</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Gold Bangles</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Gold Pendants</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Dropdown for DIAMOND -->
+                <div class="dropdown mx-2">
+                    <span class="text-dark text-decoration-none dropdown-toggle-custom">DIAMOND</span>
+                    <div class="dropdown-menu table-dropdown">
+                        <table>
+                            <tr>
+                                <th>ashgdhjsad</th>
+                                <th>sdas</th>
+                                <th>asdsd</th>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="dropdown-item-custom">Diamond Rings</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Diamond Earrings</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Diamond Necklaces</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Dropdown for EARRINGS -->
+                <div class="dropdown mx-2">
+                    <span class="text-dark text-decoration-none dropdown-toggle-custom">EARRINGS</span>
+                    <div class="dropdown-menu table-dropdown">
+                        <table>
+                            <tr>
+                                <td><a href="#" class="dropdown-item-custom">Stud Earrings</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Hoop Earrings</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Drop Earrings</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Dropdown for RINGS -->
+                <div class="dropdown mx-2">
+                    <span class="text-dark text-decoration-none dropdown-toggle-custom">RINGS</span>
+                    <div class="dropdown-menu table-dropdown">
+                        <table>
+                            <tr>
+                                <td><a href="#" class="dropdown-item-custom">Engagement Rings</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Wedding Bands</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Fashion Rings</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Dropdown for MORE -->
+                <div class="dropdown mx-2">
+                    <span class="text-dark text-decoration-none dropdown-toggle-custom">MORE</span>
+                    <div class="dropdown-menu table-dropdown">
+                        <table>
+                            <tr>
+                                <td><a href="#" class="dropdown-item-custom">Brooches</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Charms</a></td>
+                                <td><a href="#" class="dropdown-item-custom">Cufflinks</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-    <div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
